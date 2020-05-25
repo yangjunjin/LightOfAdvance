@@ -73,22 +73,21 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                 .setStyle(new NotificationCompat.BigTextStyle()
                         .bigText("Much longer text that cannot fit one line..."))
                 .setPriority(NotificationCompat.PRIORITY_DEFAULT);
-        createNotificationChannel();
+
+        //适配8.0,不然显示不了喔
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            CharSequence name = "channel_name";
+            String description = "channel_description";
+            int importance = NotificationManager.IMPORTANCE_HIGH;
+            NotificationChannel channel = new NotificationChannel("channel_id", name, importance);
+            channel.setDescription(description);
+            notificationManager.createNotificationChannel(channel);
+        }
+
         notificationManager.notify(0, builder.build());
 
     }
 
-    private void createNotificationChannel() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            CharSequence name = "channel_name";
-            String description = "channel_description";
-            int importance = NotificationManager.IMPORTANCE_DEFAULT;
-            NotificationChannel channel = new NotificationChannel("channel_id", name, importance);
-            channel.setDescription(description);
-            //NotificationManager notificationManager = getSystemService(NotificationManager.class);
-            notificationManager.createNotificationChannel(channel);
-        }
-    }
 
     private void sendFoldNotification() {
 

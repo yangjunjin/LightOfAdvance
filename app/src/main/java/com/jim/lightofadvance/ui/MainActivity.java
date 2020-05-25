@@ -27,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
                 //RecycleView的使用
                 startActivity(new Intent(this, NotificationActivity.class));
                 break;
+            case R.id.btnFitNotification:
+                startActivity(new Intent(this, FitNotificationActivity.class));
+                break;
         }
     }
 }

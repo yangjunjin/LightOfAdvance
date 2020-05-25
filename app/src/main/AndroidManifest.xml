@@ -11,7 +11,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".ui.NotificationActivity"/>
+        <activity android:name=".ui.FitNotificationActivity"></activity>
+        <activity
+            android:name=".ui.NotificationActivity"
+            android:parentActivityName=".ui.MainActivity" />
         <activity android:name=".ui.RecycleViewActivity" />
         <activity android:name=".ui.MainActivity">
             <intent-filter>

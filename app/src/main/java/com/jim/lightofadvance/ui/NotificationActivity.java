@@ -139,11 +139,6 @@ public class NotificationActivity extends AppCompatActivity implements View.OnCl
                 builder.setContentText("secret");
                 Toast.makeText(this, "secret", Toast.LENGTH_SHORT).show();
                 break;
-            default:
-                builder.setVisibility(Notification.VISIBILITY_PUBLIC);
-                builder.setContentText("public");
-                Toast.makeText(this, "public", Toast.LENGTH_SHORT).show();
-                break;
 
         }
     }

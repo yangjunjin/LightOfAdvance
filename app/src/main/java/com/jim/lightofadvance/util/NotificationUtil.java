@@ -25,8 +25,8 @@ import java.util.UUID;
 
 
 /**
- * @author suwencong
- * @date 2019/5/27
+ * @author jim
+ * @date 2020/5/28
  */
 public class NotificationUtil {
     public static int messageCount = 10;

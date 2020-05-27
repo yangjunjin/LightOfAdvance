@@ -10,34 +10,36 @@
     android:paddingTop="@dimen/activity_vertical_margin">
 
 
-    <TextView
-        android:id="@+id/tv_nomal"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/white"
-        android:clickable="true"
+        android:onClick="sendNomalNotification"
         android:gravity="center"
         android:text="普通通知" />
 
-    <TextView
-        android:id="@+id/tv_fold"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/white"
-        android:clickable="true"
+        android:onClick="sendSpreadNotification"
         android:gravity="center"
-        android:text="折叠式通知" />
+        android:text="创建展开式通知" />
 
-    <TextView
-        android:id="@+id/tv_hang"
+    <Button
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginTop="10dp"
-        android:background="@android:color/white"
-        android:clickable="true"
+        android:onClick="sendHangNotification"
         android:gravity="center"
         android:text="悬挂式通知" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:onClick="sendTimeLinessNotification"
+        android:gravity="center"
+        android:text="显示有时效性的通知" />
 
 </LinearLayout>

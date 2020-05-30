@@ -30,6 +30,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnFitNotification:
                 startActivity(new Intent(this, FitNotificationActivity.class));
                 break;
+            case R.id.btnPalette:
+                startActivity(new Intent(this, PaletteActivity.class));
+                break;
         }
     }
 }
